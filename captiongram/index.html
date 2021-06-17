@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captiongram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat&family=Source+Code+Pro:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="caption-container" id="caption-container">
+        <div class="image-selector">
+            <input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
+            <label for="file" style="cursor: pointer;" id="uploadBtn">Upload Image</label>
+            <img src="" alt="" id="output" width="200">
+            <em id="caption"></em>
+        </div>
+
+        <div class="caption-section">
+            <div class="category">
+                <select name="category" id="category">
+                    <option value="">Pick a category</option>
+                    <option value="food">Food</option>
+                    <option value="travel">Travel</option>
+                    <option value="love">Love</option>
+                    <option value="art">Art</option>
+                </select>
+            </div>
+
+            <div class="actionBtn">
+                <button id="generate" title="Generate Caption">Generate Caption</button>
+                <button id="save">Save and Post</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <section class="gallery">
+        <div class="card">
+            <img id="uploadedImage" alt="Avatar" style="width:100%">
+            <div class="card-container">
+              <p id="finalCaption"></p>
+            </div>
+          </div>
+    </section> -->
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
